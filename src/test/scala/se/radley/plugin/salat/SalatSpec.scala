@@ -78,7 +78,7 @@ object SalatSpec extends Specification {
       "populate hosts from URI" in {
         salat must beAnInstanceOf[SalatPlugin]
         val source = salat.source("default")
-        source.hosts must equalTo(List(new ServerAddress("127.0.0.1", 27017)))
+        source.hosts must contain(new ServerAddress("127.0.0.1", 27017)).only
       }
 
       /*
@@ -113,7 +113,7 @@ object SalatSpec extends Specification {
 
       "populate hosts with multiple URIs" in {
         val source = salat.source("default")
-        source.hosts must equalTo(List(new ServerAddress("127.0.0.1", 27017), new ServerAddress("mongodb.org", 1337)))
+        source.hosts must contain(new ServerAddress("127.0.0.1", 27017), new ServerAddress("mongodb.org", 1337)).only
       }
     }
   }
@@ -139,7 +139,7 @@ object SalatSpec extends Specification {
 
       "populate hosts from config" in {
         val source = salat.source("default")
-        source.hosts must equalTo(List(new ServerAddress("10.0.0.1", 27018), new ServerAddress("10.0.0.2", 27017)))
+        source.hosts must contain(new ServerAddress("10.0.0.1", 27018), new ServerAddress("10.0.0.2", 27017)).only
       }
     }
   }

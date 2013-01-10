@@ -9,7 +9,7 @@ import java.io.File
 import play.api.Play.current
 import play.api.libs.json._
 import play.api.libs.json.Json._
-import play.api.libs.json.Generic._
+import play.api.libs.json.Format._
 import org.bson.types.ObjectId
 import Formats.objectId
 import Binders._
