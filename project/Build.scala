@@ -21,7 +21,7 @@ object ProjectBuild extends Build {
       "play" % "play-exceptions" % "2.1-RC2" % "provided",
       "play" %% "play-test" % "2.1-RC2" % "test",
       "com.novus" %% "salat-core" % "1.9.2-SNAPSHOT",
-      "org.mongodb" %% "casbah-gridfs" % "2.5.0-SNAPSHOT"
+      "org.mongodb" %% "casbah-gridfs" % "2.5.0"
     )
   )
 }
